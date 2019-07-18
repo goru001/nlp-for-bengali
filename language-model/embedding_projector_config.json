@@ -1,0 +1,13 @@
+{
+  "embeddings": [
+    {
+      "tensorName": "Bengali Embedding Vectors",
+      "tensorShape": [
+        30000,
+        400
+      ],
+      "tensorPath": "https://media.githubusercontent.com/media/goru001/nlp-for-bengali/master/language-model/embeddings.tsv",
+      "metadataPath": "https://media.githubusercontent.com/media/goru001/nlp-for-bengali/master/language-model/embeddings_metadata.tsv"
+    }
+  ]
+}
