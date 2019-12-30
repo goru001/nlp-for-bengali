@@ -1,28 +1,47 @@
 # NLP for Bengali
 
-This repository contains State of the Art Tokenizer, Language model
- and Classifier for Bengali, which is primarily spoken by the Bengalis in South Asia.
+This repository contains State of the Art Language models
+ and Classifier for Bengali language, which is primarily spoken by the Bengalis
+  in South Asia.
+
+The models trained here have been used in [Natural Language Toolkit for Indic Languages
+ (iNLTK)](https://github.com/goru001/inltk)
 
 ## Dataset
 
-* Download [Bengali Wikipedia Articles Dataset](https://drive.google.com/open?id=1GC76qIGbly4sKX9XsUP_OtsI80nJ6lQ4) (72,374 articles) which I scraped, cleaned and
-used to train the language model
+#### Created as part of this project
+1. [Bengali Wikipedia Articles](https://www.kaggle.com/disisbig/bengali-wikipedia-articles)
 
-Thanks to [Soham](https://github.com/soham96) for making available [these](https://www.kaggle.com/csoham/classification-bengali-news-articles-indicnlp)
-Bengali News Articles for classification which I used to train the classifier.
+#### Open Source Datasets
+2. [Bengali News Articles](https://www.kaggle.com/csoham/classification-bengali-news-articles-indicnlp)
 
 ## Results
 
-#### Language Model
+#### Language Model Perplexity
 
-`on 30% validation set`
+| Architecture/Dataset | Bengali Wikipedia Articles |
+|:--------:|:----:|
+|   ULMFiT  |  41.2  |
+|  TransformerXL |  39.3  |
 
-* Perplexity of language model: ~41
+#### Classification Metrics
 
-#### Classifier
+##### ULMFiT
 
-* Accuracy of classification model: ~94%
-* Kappa score of classification model: ~92
+| Dataset | Accuracy | Kappa Score |
+|:--------:|:----:|:----:|
+| Bengali News Articles |  93.8  |  92  |
+
+#### Visualizations
+ 
+##### Embedding Space
+
+| Architecture | Visualization |
+|:--------:|:----:|
+| ULMFiT | [Embeddings projection](https://projector.tensorflow.org/?config=https://raw.githubusercontent.com/goru001/nlp-for-bengali/master/language-model/embedding_projector_config.json) |
+| TransformerXL | [Embeddings projection](https://projector.tensorflow.org/?config=https://raw.githubusercontent.com/goru001/nlp-for-bengali/master/language-model/embedding_projector_transformer_config.json)  |
+
+
 
 ## Pretrained Language Model
 
